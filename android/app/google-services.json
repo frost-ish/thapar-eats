@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "559524046424",
+    "project_id": "thapar-eats",
+    "storage_bucket": "thapar-eats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559524046424:android:943ffc3ce4cde4df4a8c2d",
+        "android_client_info": {
+          "package_name": "com.example.thapar_eats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559524046424-qk5ntdkmpicnm5k5mjscflfp3054819c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1l8Pu_QsRjr7VHikFjsLHOG0JOKKenjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559524046424-ipkosvcs26tm08o409l22c00da2qj0t0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "559524046424-0jmks69fflt3vh1ff058e3mm5dqbj4tr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.thaparEats"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

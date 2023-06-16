@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>559524046424-0jmks69fflt3vh1ff058e3mm5dqbj4tr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.559524046424-0jmks69fflt3vh1ff058e3mm5dqbj4tr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB5b1oYsaD7NyJhX2U0ON1McrKOabPiYSQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>559524046424</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.thaparEats</string>
+	<key>PROJECT_ID</key>
+	<string>thapar-eats</string>
+	<key>STORAGE_BUCKET</key>
+	<string>thapar-eats.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:559524046424:ios:29dee9d61a4dd9154a8c2d</string>
+</dict>
+</plist>
