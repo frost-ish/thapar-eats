@@ -11,19 +11,19 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: const Color(0xfff5b0cb),
+        backgroundColor: windowBackground,
         body: SafeArea(
           child: Column(children: [
             Container(
-              margin: const EdgeInsets.all(8),
+              margin: const EdgeInsets.all(25),
               width: MediaQuery.of(context).size.width - 16,
-              height: MediaQuery.of(context).size.height * 2 / 5,
+              height: MediaQuery.of(context).size.height * 2 / 4.5,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10), // Image border
                 child: SizedBox.fromSize(
                   size: const Size.fromRadius(48), // Image radius
                   child: Image.asset(
-                    'assets/images/sample.png',
+                    'assets/images/image.png',
                     fit: BoxFit.cover,
                     scale: 10,
                   ),
@@ -36,8 +36,9 @@ class FirstPage extends StatelessWidget {
                 'Welcome to Thapar Eats!',
                 style: TextStyle(
                     fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: colorTextPrimary,
+                   
+                    color: colorTextLight,
+                  
                     height: 1.2),
               ),
             ),
@@ -53,13 +54,13 @@ class FirstPage extends StatelessWidget {
                         builder: (context) => const LoginScreen(),
                       ));
                 },
-                style: darkButtonStyle,
+                style: lightButtonStyle,
                 child: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 15),
                   child: Text(
                     'Get Started',
                     style: TextStyle(
-                        color: colorTextButton,
+                        color: colorTextDark,
                         fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
@@ -70,7 +71,7 @@ class FirstPage extends StatelessWidget {
                 margin: EdgeInsets.all(8),
                 child: Text(
                   'Need help signing in?',
-                  style: TextStyle(color: colorTextPrimary),
+                  style: TextStyle(color: colorTextLight),
                 )),
           ]),
         ),
