@@ -7,6 +7,8 @@ const colorTextLight = Color(0xfff1fffa);
 
 const colorTextLightSemiOpaque = Color.fromARGB(179, 241, 255, 250);
 
+const colorTextHint = Colors.grey;
+
 const colorButtonLightEnabled = Color(0xfff1fffa);
 const colorButtonLightHover = Color(0xFF18171f);
 
@@ -25,3 +27,9 @@ final lightButtonStyle = ElevatedButton.styleFrom(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(18.0),
     ));
+final textStyle = TextStyle(
+    fontSize: 40,
+    color: colorTextLight,
+    height: 1.2,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'Nunito');
