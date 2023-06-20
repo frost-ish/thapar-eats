@@ -5,21 +5,23 @@ import 'package:flutter/material.dart';
 const colorTextDark = Color(0xFF18171f);
 const colorTextLight = Color(0xfff1fffa);
 
-const colorButtonLight = Color(0xfff1fffa);
+const colorTextLightSemiOpaque = Color.fromARGB(179, 241, 255, 250);
+
+const colorButtonLightEnabled = Color(0xfff1fffa);
+const colorButtonLightHover = Color(0xFF18171f);
 
 const windowBackground = Color(0xFF18171f);
 
 const colorButtonDark = Color(0xFF18171f);
 
-final darkButtonStyle = ButtonStyle(
-    backgroundColor: MaterialStateProperty.all(colorButtonDark),
-    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
+final darkButtonStyle = ElevatedButton.styleFrom(
+    backgroundColor: colorButtonDark,
+    shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(18.0),
-    )));
-final lightButtonStyle = ButtonStyle(
-    backgroundColor: MaterialStateProperty.all(colorButtonLight),
-    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        RoundedRectangleBorder(
+    ));
+final lightButtonStyle = ElevatedButton.styleFrom(
+    foregroundColor: colorButtonLightHover,
+    backgroundColor: colorButtonLightEnabled,
+    shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(18.0),
-    )));
+    ));
