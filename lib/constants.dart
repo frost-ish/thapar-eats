@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 // const colorPrimary = Color(0xFF5C6BC0);
 
-const colorTextDark = Color(0xFF18171f);
+const colorTextDark = Color(0xFF18171F);
 const colorTextLight = Color(0xfff1fffa);
 
+const colorTextDarkSecondary = Colors.grey;
 const colorTextLightSemiOpaque = Color.fromARGB(179, 241, 255, 250);
 
 const colorTextHint = Colors.grey;
@@ -33,3 +34,6 @@ final textStyle = TextStyle(
     height: 1.2,
     fontWeight: FontWeight.bold,
     fontFamily: 'Nunito');
+
+const errorLocationDisabledUniSelector =
+    "Location permission denied. Please search for your university";

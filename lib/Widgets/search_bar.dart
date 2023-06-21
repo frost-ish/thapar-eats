@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:thapar_eats/constants.dart';
 
-class SearchBar extends StatefulWidget {
+class MySearchBar extends StatefulWidget {
   BuildContext context;
-  SearchBar(this.context);
+  MySearchBar(this.context);
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<MySearchBar> createState() => _SearchBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _SearchBarState extends State<MySearchBar> {
   var controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -21,12 +21,7 @@ class _SearchBarState extends State<SearchBar> {
         controller: controller,
         decoration: InputDecoration(
           hintText: "Search here",
-          hintStyle: TextStyle(color: Colors.grey),
-          suffixIcon: GestureDetector(
-              onTap: () {
-                controller.text = "";
-              },
-              child: Icon(Icons.cancel)),
+          hintStyle: TextStyle(color: colorTextHint, fontFamily: "Nunito"),
           prefixIcon: Icon(Icons.search),
         ),
       ),

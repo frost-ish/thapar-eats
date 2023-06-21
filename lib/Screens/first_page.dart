@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:thapar_eats/Screens/login_screen.dart';
 import 'package:thapar_eats/Screens/uni_selector_page.dart';
 import 'package:thapar_eats/constants.dart';
 
@@ -56,7 +54,7 @@ class FirstPage extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const UniSelectorPage(),
+                      builder: (context) => UniSelectorPage(),
                     ));
               },
               style: lightButtonStyle,
