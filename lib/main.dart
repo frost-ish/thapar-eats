@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:thapar_eats/Screens/home_page.dart';
 import 'package:thapar_eats/firebase_options.dart';
 
 import 'Screens/first_page.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: FirstPage(),
+      home: HomePage(),
     );
   }
 }

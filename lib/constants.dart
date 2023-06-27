@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 // const colorPrimary = Color(0xFF5C6BC0);
+const colorPrimary = Color(0xFF18171F);
+const colorPrimaryLight = Color(0xfff1fffa);
 
 const colorTextDark = Color(0xFF18171F);
 const colorTextLight = Color(0xfff1fffa);
@@ -14,6 +16,7 @@ const colorButtonLightEnabled = Color(0xfff1fffa);
 const colorButtonLightHover = Color(0xFF18171f);
 
 const windowBackground = Color(0xFF18171f);
+const windowBackgroundLight = Color(0xfff1fffa);
 
 const colorButtonDark = Color(0xFF18171f);
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:thapar_eats/constants.dart';
 
 class MySearchBar extends StatefulWidget {
@@ -16,7 +17,7 @@ class _SearchBarState extends State<MySearchBar> {
     return Material(
       borderRadius: BorderRadius.circular(15),
       clipBehavior: Clip.antiAlias,
-      elevation: 20,
+      elevation: 10,
       child: Container(
         color: colorButtonLightEnabled,
         width: MediaQuery.of(context).size.width,
@@ -27,7 +28,14 @@ class _SearchBarState extends State<MySearchBar> {
             hintText: "Search here",
             border: InputBorder.none,
             hintStyle: TextStyle(color: colorTextHint, fontFamily: "Nunito"),
-            prefixIcon: Icon(Icons.search),
+            prefixIcon: Container(
+              padding: EdgeInsets.all(17),
+              child: SvgPicture.asset(
+                'assets/icons/search.svg',
+                width: 20,
+                height: 20,
+              ),
+            ),
           ),
         ),
       ),
