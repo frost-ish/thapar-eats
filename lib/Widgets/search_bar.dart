@@ -13,16 +13,22 @@ class _SearchBarState extends State<MySearchBar> {
   var controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: colorButtonLightEnabled,
-      width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(horizontal: 6),
-      child: TextField(
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: "Search here",
-          hintStyle: TextStyle(color: colorTextHint, fontFamily: "Nunito"),
-          prefixIcon: Icon(Icons.search),
+    return Material(
+      borderRadius: BorderRadius.circular(15),
+      clipBehavior: Clip.antiAlias,
+      elevation: 20,
+      child: Container(
+        color: colorButtonLightEnabled,
+        width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.symmetric(horizontal: 6),
+        child: TextField(
+          controller: controller,
+          decoration: InputDecoration(
+            hintText: "Search here",
+            border: InputBorder.none,
+            hintStyle: TextStyle(color: colorTextHint, fontFamily: "Nunito"),
+            prefixIcon: Icon(Icons.search),
+          ),
         ),
       ),
     );
