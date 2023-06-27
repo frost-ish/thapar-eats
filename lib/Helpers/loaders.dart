@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:thapar_eats/constants.dart';
 
-enum LoaderType { loading, locating }
+enum LoaderType { loading, locating, findingUni }
 
 class Loaders {
   static int count = 0;
   static LoaderType? currentAlertDialogType;
   BuildContext context;
-  Loaders(this.context) {
-    count++;
+  Loaders._(this.context);
+  factory Loaders.from(BuildContext context) {
+    return Loaders._(context);
   }
 
   void _createDialog(LoaderType type, bool isCancellable) {
@@ -25,57 +26,62 @@ class Loaders {
         description = "This might take a couple seconds";
         animationUri = "assets/gifs/locating.gif";
         break;
+      case LoaderType.findingUni:
+        title = "Finding your College";
+        description = "This might take a couple seconds";
+        animationUri = "assets/gifs/degree_cap.gif";
     }
-    AlertDialog alert = AlertDialog(
-      backgroundColor: Colors.transparent,
-      content: Center(
-        child: Container(
-          padding: EdgeInsets.all(16),
-          decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(16)),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                animationUri,
-                width: 100,
-                height: 100,
+    currentAlertDialogType = type;
+    _showDialog(
+        AlertDialog(
+          backgroundColor: Colors.transparent,
+          content: Center(
+            child: Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(16)),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    animationUri,
+                    width: 100,
+                    height: 100,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: colorTextDark,
+                        fontSize: 20,
+                        fontFamily: "Nunito",
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 2,
+                  ),
+                  Text(
+                    description,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: colorTextDarkSecondary,
+                        fontSize: 16,
+                        fontFamily: "Nunito",
+                        fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  )
+                ],
               ),
-              SizedBox(
-                height: 8,
-              ),
-              Text(
-                title,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: colorTextDark,
-                    fontSize: 20,
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 2,
-              ),
-              Text(
-                description,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: colorTextDarkSecondary,
-                    fontSize: 16,
-                    fontFamily: "Nunito",
-                    fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 8,
-              )
-            ],
+            ),
           ),
         ),
-      ),
-    );
-    currentAlertDialogType = type;
-    _showDialog(alert, isCancellable);
+        isCancellable);
   }
 
   void _showDialog(AlertDialog alert, bool isCancellable) {
@@ -90,6 +96,7 @@ class Loaders {
         }
       },
     );
+    count++;
   }
 
   void cancelAll() {
