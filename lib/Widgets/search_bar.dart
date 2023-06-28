@@ -29,7 +29,7 @@ class _SearchBarState extends State<MySearchBar> {
             border: InputBorder.none,
             hintStyle: TextStyle(color: colorTextHint, fontFamily: "Nunito"),
             prefixIcon: Container(
-              padding: EdgeInsets.all(17),
+              padding: EdgeInsets.all(16),
               child: SvgPicture.asset(
                 'assets/icons/search.svg',
                 width: 20,

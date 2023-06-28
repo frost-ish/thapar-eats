@@ -1,8 +1,10 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:thapar_eats/Widgets/carousel.dart';
 import 'package:thapar_eats/Widgets/search_bar.dart';
 import 'package:thapar_eats/constants.dart';
 
@@ -21,14 +23,14 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(mainAxisSize: MainAxisSize.max, children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),
+            padding: const EdgeInsets.all(16),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
                 SvgPicture.asset(
                   'assets/icons/map-pin.svg',
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 6,
                 ),
                 Expanded(
@@ -37,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             'Unknown address',
                             style: TextStyle(
                               color: colorTextDark,
@@ -52,10 +54,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 2,
                       ),
-                      Text(
+                      const Text(
                           'Thapar Institute of Engineering and Technology blah blah blah blah',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -66,8 +68,8 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 16,
+                const SizedBox(
+                  width: 32,
                 ),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10), // Image border
@@ -83,7 +85,13 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          Container(margin: EdgeInsets.all(16), child: MySearchBar(context)),
+          Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: MySearchBar(context)),
+          const SizedBox(
+            height: 16,
+          ),
+          MyCarousel(),
         ]),
       ),
     );
