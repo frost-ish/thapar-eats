@@ -8,6 +8,8 @@ import 'package:thapar_eats/Widgets/carousel.dart';
 import 'package:thapar_eats/Widgets/search_bar.dart';
 import 'package:thapar_eats/constants.dart';
 
+import '../Widgets/categories.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -92,6 +94,38 @@ class _HomePageState extends State<HomePage> {
             height: 16,
           ),
           MyCarousel(),
+          const SizedBox(
+            height: 16,
+          ),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 16.0, right: 26.0),
+                    child: const Divider(
+                      color: Colors.grey,
+                      height: 36,
+                    )),
+              ),
+              const Text(
+                "EXPLORE",
+                style: TextStyle(
+                    fontFamily: 'Nunito', fontSize: 14, color: Colors.grey),
+              ),
+              Expanded(
+                child: Container(
+                    margin: const EdgeInsets.only(left: 26.0, right: 16.0),
+                    child: const Divider(
+                      color: Colors.grey,
+                      height: 36,
+                    )),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          Categories(),
         ]),
       ),
     );
